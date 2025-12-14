@@ -1,0 +1,263 @@
+:root {
+  --bg: #060712;
+  --neon1: #5fffe3;
+  --neon2: #9b7bff;
+  --neon3: #ff6ec7;
+  --neon4: #ffe9b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0e1440, var(--bg));
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* STAR DOT BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#7f7cff 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--neon3), var(--neon2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cfd3ff;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--neon1);
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+}
+
+.icons img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.icons img:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.window {
+  width: 70%;
+  padding: 60px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--neon1), var(--neon2), var(--neon4)) 1;
+  position: relative;
+}
+
+.window-bar {
+  position: absolute;
+  top: -22px;
+  left: 25px;
+  display: flex;
+  gap: 8px;
+}
+
+.window-bar span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--neon2);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 96px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--neon2), var(--neon1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(90deg, var(--neon1), var(--neon4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.script {
+  font-family: 'Pacifico', cursive;
+  color: var(--neon3);
+  font-size: 42px;
+  margin-top: -20px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 18px;
+  background: linear-gradient(90deg, var(--neon4), var(--neon1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.About_Me {
+  width: 60%;
+  padding: 40px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--neon3), var(--neon2), var(--neon1)) 1;
+}
+
+.About_Me h3 {
+  font-weight: 300;
+  line-height: 1.8;
+  color: #e0e4ff;
+}
+
+.laptop {
+  width: 300px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.link{
+    text-decoration: none;
+    
+}
+
+/* ===== PROJECTS SECTION ===== */
+
+.projects-section {
+  padding: 90px 10%;
+  background: radial-gradient(circle at top, #1b1035, #0b0620);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  margin-bottom: 70px;
+  color: #ffffff;
+}
+
+/* Grid for 2 project boxes */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+/* Glow effect on hover */
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 35px rgba(138, 99, 255, 0.35);
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+  color: #c9bcff;
+}
+
+/* Project Type */
+.project-type {
+  font-size: 0.9rem;
+  color: #a4a0d8;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+/* Description */
+.project-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e0e0f5;
+  margin-bottom: 30px;
+}
+
+/* GitHub Button */
+.project-link {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8a63ff, #c77dff);
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(199, 125, 255, 0.6);
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
