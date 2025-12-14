@@ -261,3 +261,81 @@ body::before {
     grid-template-columns: 1fr;
   }
 }
+/* ===== SKILLS / CERTIFICATIONS SECTION ===== */
+
+.skills-section {
+  padding: 90px 10%;
+  background: radial-gradient(circle at top, #140b2e, #090412);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Hover glow */
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(138, 99, 255, 0.35);
+}
+
+/* Title */
+.skill-card h3 {
+  font-size: 1.7rem;
+  color: #c9bcff;
+  margin-bottom: 6px;
+}
+
+/* Organization */
+.skill-org {
+  font-size: 0.95rem;
+  color: #a4a0d8;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+/* Description */
+.skill-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e0e0f5;
+  margin-bottom: 25px;
+}
+
+/* Certificate image */
+.certificate-box {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certificate-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect */
+.certificate-box:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 25px;
+  }
+}
