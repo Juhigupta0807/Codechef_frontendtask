@@ -35,6 +35,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   padding: 30px 60px;
+  z-index: 10;
 
 }
 
@@ -44,12 +45,21 @@ body::before {
   background: linear-gradient(90deg, var(--neon3), var(--neon2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: 11;
+  
+  transition: transform 1s ease;
+       
+}
+
+.logo:hover{
+  transform: rotate(360deg);
 }
 
 .nav-links {
   display: flex;
   gap: 25px;
   align-items: center;
+  z-index: 11;
 }
 
 .nav-links a {
@@ -87,12 +97,68 @@ body::before {
   height: 80vh;
 }
 
+.floating-icons {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.floating-icons img {
+  position: absolute;
+  opacity: 0.7;
+  width: 80px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.float_one {
+  top: 20%;
+  left: 10%;
+}
+
+.float_two {
+  top: 60%;
+  left: 90%;
+  animation-delay: 2s;
+}
+
+.float_three {
+  top: 20%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.float_four {
+  top: 80%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.float_five {
+  top: 90%;
+  left: 10%;
+  animation-delay: 1s;
+}
+
+.float_one:hover{
+  transform:rotate(360)
+}
+
+
+
+
+
+
+
+
 .window {
   width: 70%;
   padding: 60px;
   border: 3px solid transparent;
   border-image: linear-gradient(90deg, var(--neon1), var(--neon2), var(--neon4)) 1;
   position: relative;
+  z-index: 2;
 }
 
 .window-bar {
