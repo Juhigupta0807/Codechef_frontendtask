@@ -141,15 +141,17 @@ body::before {
   animation-delay: 1s;
 }
 
-.float_one:hover{
-  transform:rotate(360)
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-
-
-
-
-
-
 
 
 .window {
@@ -238,11 +240,6 @@ body::before {
   
 }
 
-/* #profile {
-  width: 300px;
-  height: auto;
-  opacity: 0.9;
-} */
 
 #myimg {
     width:300px;
@@ -289,9 +286,9 @@ body::before {
 
 .title_pic{
     display: flex;
-    align-items: center;     /* vertical alignment */
-    gap: 40px;               /* space between text and circle */
-    margin-top: 20px;        /* you can adjust */
+    align-items: center;     
+    gap: 40px;               
+    margin-top: 20px;        
     margin-bottom: 60px;
     margin-left: 250px;
     margin-right: 200px;
@@ -305,7 +302,7 @@ body::before {
 }
 
 .visual_effect_pic1{
-  perspective: 650px;   /* creates 3D depth */
+  perspective: 650px;   
 }
 
 #visual1{
@@ -339,7 +336,7 @@ body::before {
 }
 
 
- /* UPDATIONNNNNN */
+ /* UPDATION */
  .project-card {
   background-image: url("pink_gradient.jpg");
   background-size: cover;
@@ -405,13 +402,13 @@ body::before {
   background: #4338ca;
  }
 
-/* Responsive: stack cards on smaller screens */
+
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
 }
-/* ===== SKILLS / CERTIFICATIONS SECTION ===== */
+/* SKILLS SECTION */
 
 .skills-section {
   padding: 90px 10%;
@@ -420,9 +417,9 @@ body::before {
 
 .title_pic2{
     display: flex;
-    align-items: center;     /* vertical alignment */
-    gap: 40px;               /* space between text and circle */
-    margin-top: 20px;        /* you can adjust */
+    align-items: center;    
+    gap: 40px;               
+    margin-top: 20px;        
     margin-bottom: 60px;
     margin-left: 250px;
     margin-right: 200px;
@@ -453,7 +450,7 @@ body::before {
 }
 
 .visual_effect{
-  perspective: 800px;   /* creates 3D depth */
+  perspective: 800px;   
 }
 
 #learn{
